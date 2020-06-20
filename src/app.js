@@ -20,6 +20,7 @@ app.use(myConnection(mysql,{
     port:8889,
     database:'new_schema'
 },'single'));
+app.use(express.urlencoded({extended:false}));
 
 // Routes
 app.use('/', userRoutes);
